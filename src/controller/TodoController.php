@@ -14,6 +14,7 @@ class TodoController
     {
         $todos = Todo::getAllTodos();
         //Require associated views
+        //verify if exists and sends back array
     }
 
     public function updateTodo(array $data)

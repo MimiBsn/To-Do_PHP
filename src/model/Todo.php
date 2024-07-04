@@ -40,6 +40,7 @@ class Todo
     {
         $todos = self::getAllTodos();
         $data['id'] = uniqid();
+        $data['creation_date'] = date("m.d.y g:i a");
         $todo[] = $data;
         self::saveTodo($todos);
     }
@@ -57,6 +58,7 @@ class Todo
         foreach($todos as &$todo) {               //The & allows to modify todo in [todos].
             if($todo['id'] == $data['id']) {
                 $todo = $data;
+                $data['modification_date'] = date("m.d.y g:i a");
                 break;
             }
         }
