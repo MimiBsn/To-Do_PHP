@@ -1,9 +1,8 @@
-{
+[{
    "id": 1,
    "name": "TODO - test",
    "creation_date": "04/07/2024",
    "modification_date": null,
    "completed_date": null,
-   "active": false,
    "completed": false 
-}
+}]

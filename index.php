@@ -1,4 +1,7 @@
-<?php include './src/view/header.php'; ?>
+<?php
+include './router.php';
+include './src/view/header.php';
+?>
 
 <h1>Hello World</h1>
 
