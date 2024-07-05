@@ -19,8 +19,8 @@ switch($requestUri) {
         }
         break;
     case '/delete':
-        if($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $controller->deleteTodo($_POST['id']);
+        if($_SERVER['REQUEST_METHOD'] === 'GET') {
+            $controller->deleteTodo($_GET['id']);
         } else {
             echo "<alert class=\"alert\">The file doesn't exist</alert>";
         }

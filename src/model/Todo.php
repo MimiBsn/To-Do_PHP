@@ -45,6 +45,7 @@ class Todo
         $newId = end($todos);
         $data['id'] = $newId['id'] + 1;
         $data['creation_date'] = date("m.d.y g:i a");
+        $data['completed'] = false;
         $todos[] = $data;
         self::saveTodo($todos);
     }

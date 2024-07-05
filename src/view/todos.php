@@ -11,7 +11,11 @@ $todos = Todo::getAllTodos();
 <div x-data="{todos: window.todosData}">
     <ul>
         <template x-for="todo in todos" :key="todo.id">
-            <li x-text="todo.name"></li>
+            <li>
+                <span x-text="todo.name"></span>
+                <a :href="'/update?id=' + todo.id" class="btn btn-secondary btn-sm">Update</a>
+                <a :href="'/delete?id=' + todo.id" class="btn btn-secondary btn-sm">Delete</a>
+            </li>
         </template>
     </ul>
 </div>

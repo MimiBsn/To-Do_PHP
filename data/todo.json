@@ -1,5 +1,5 @@
-[
-    {
+{
+    "0": {
         "id": 1,
         "name": "TODO - test",
         "creation_date": "04\/07\/2024",
@@ -7,14 +7,22 @@
         "completed_date": null,
         "completed": false
     },
-    {
-        "name": "Test",
-        "id": 2,
-        "creation_date": "07.05.24 1:08 pm"
+    "3": {
+        "name": "Test2",
+        "id": 4,
+        "creation_date": "07.05.24 1:14 pm",
+        "completed": "false"
     },
-    {
-        "name": "Finish this exercise",
-        "id": 3,
-        "creation_date": "07.05.24 1:08 pm"
+    "4": {
+        "name": "Aller",
+        "id": 5,
+        "creation_date": "07.05.24 1:29 pm",
+        "completed": false
+    },
+    "5": {
+        "name": "TODO - test update",
+        "id": 6,
+        "creation_date": "07.05.24 1:47 pm",
+        "completed": false
     }
-]
+}
