@@ -1,8 +1,20 @@
-[{
-   "id": 1,
-   "name": "TODO - test",
-   "creation_date": "04/07/2024",
-   "modification_date": null,
-   "completed_date": null,
-   "completed": false 
-}]
+[
+    {
+        "id": 1,
+        "name": "TODO - test",
+        "creation_date": "04\/07\/2024",
+        "modification_date": null,
+        "completed_date": null,
+        "completed": false
+    },
+    {
+        "name": "Test",
+        "id": 2,
+        "creation_date": "07.05.24 1:08 pm"
+    },
+    {
+        "name": "Finish this exercise",
+        "id": 3,
+        "creation_date": "07.05.24 1:08 pm"
+    }
+]

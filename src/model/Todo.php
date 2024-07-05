@@ -1,5 +1,8 @@
 <?php
 
+//Define the path to JSON file
+define('DATA_FILE', dirname(__FILE__, 3) . '/data/todo.json');
+var_dump(DATA_FILE);
 class Todo
 {
     /**
@@ -39,9 +42,10 @@ class Todo
     public static function createTodo(array $data)
     {
         $todos = self::getAllTodos();
-        $data['id'] = uniqid();
+        $newId = end($todos);
+        $data['id'] = $newId['id'] + 1;
         $data['creation_date'] = date("m.d.y g:i a");
-        $todo[] = $data;
+        $todos[] = $data;
         self::saveTodo($todos);
     }
 
@@ -96,5 +100,4 @@ class Todo
         file_put_contents(DATA_FILE, json_encode($todos, JSON_PRETTY_PRINT));
     }
 
-    //Write a function for the completed todos ?
 }

@@ -1,8 +1,7 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include './router.php';
-include './src/view/header.php';
-?>
-
-<h1>Hello World</h1>
-
-<?php include './src/view/footer.php'; ?>

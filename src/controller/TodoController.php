@@ -7,37 +7,38 @@ class TodoController
     public function createTodo(array $data)
     {
         Todo::createTodo($data);
-        //redirect to the todos list
+        header('Location: /');
     }
 
     public function showTodos()
     {
-        $todos = Todo::getAllTodos();
-        //Require associated views
-        //verify if exists and sends back array
+        if(function_exists("Todo::getAllTodos") && is_array("Todo::getAllTodos")) {
+            $todos = Todo::getAllTodos();
+        }
+        require './src/view/todos.php';
     }
 
     public function updateTodo(array $data)
     {
         Todo::updateTodo($data);
-        //Redirect to todos list
+        header('Location: /');
     }
 
     public function deleteTodo(int $id)
     {
         Todo::deleteTodoById($id);
-        //Redirect to todos list
+        header('Location: /');
     }
 
     public function showCreateForm()
     {
-        //Require associated view
+        require './src/view/create.php';
     }
 
     public function showUpdateForm(int $id)
     {
         Todo::getTodoById($id);
-        //Require associated view
+        require './src/view/update.php';
     }
 
 
