@@ -24,5 +24,11 @@
         "name": "Finish this project",
         "creation_date": "07.08.24 7:34 am",
         "completed": false
+    },
+    "6": {
+        "name": "Finish this exercise",
+        "id": 7,
+        "creation_date": "07.08.24 1:34 pm",
+        "completed": false
     }
 }

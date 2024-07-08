@@ -20,7 +20,7 @@ $todos = Todo::getAllTodos();
         </tr>
         <template x-for="todo in todos" :key="todo.id">
             <tr>
-                <td x-data="{todo.completed : false}"><input type="checkbox" @click="todo.completed = ! todo.completed">
+                <td><input type="checkbox">
                 </td>
                 <td>
                     <span x-text="todo.name"></span>
@@ -32,10 +32,11 @@ $todos = Todo::getAllTodos();
     </table>
 </div>
 <h2>Completed To-do</h2>
-<div x-show="todo.completed">
+<!--<div x-show="todo.completed">
     <td>
         <span x-text="todo.name"></span>
     </td>
-</div>
+</div>!-->
+
 
 <?php include 'footer.php';?>

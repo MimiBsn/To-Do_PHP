@@ -4,6 +4,7 @@ require 'config.php';
 require './src/controller/TodoController.php';
 
 $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$id =
 $controller = new TodoController();
 
 
@@ -27,7 +28,7 @@ switch($requestUri) {
         break;
     case '/update':
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $controller->updateTodo($_POST);
+            $controller->updateTodo();
         } else {
             $controller->showUpdateForm($_GET['id']);
         }

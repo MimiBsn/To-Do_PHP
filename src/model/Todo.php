@@ -80,19 +80,14 @@ class Todo
     public static function showUpdateForm($id)
     {
         $todos = self::getAllTodos();
-        $todo = null;
 
         foreach($todos as $current) {
             if($current['id'] == $id) {
-                $todo = $current;
-                break;
+                return $current;
             }
         }
 
-        if($todo === null) {
-            echo "To-do not found";
-            exit;
-        }
+        return null;
     }
 
 
@@ -121,7 +116,7 @@ class Todo
      * @param array $todos
      * @return void
      */
-    private static function saveTodo(array $todos)
+    public static function saveTodo(array $todos)
     {
         file_put_contents(DATA_FILE, json_encode($todos, JSON_PRETTY_PRINT));
     }
