@@ -59,15 +59,40 @@ class Todo
      */
     public static function updateTodo(array $data)
     {
+        $todoId = $_POST['id'];
+        $updatedName = $_POST['name'];
         $todos = self::getAllTodos();
-        foreach($todos as &$todo) {               //The & allows to modify todo in [todos].
-            if($todo['id'] == $data['id']) {
-                $todo = $data;
-                $data['modification_date'] = date("m.d.y g:i a");
+
+        foreach($todos as $current) {
+            if($current['id'] == $todoId) {
+                $current['name'] == $updatedName;
+                $current['modification_date'] = date("m.d.y g:i a");
+                return $current = $todos;
                 break;
             }
         }
+
         self::saveTodo($todos);
+    }
+    /**
+     * !Not sure about that
+     */
+    public static function showUpdateForm($id)
+    {
+        $todos = self::getAllTodos();
+        $todo = null;
+
+        foreach($todos as $current) {
+            if($current['id'] == $id) {
+                $todo = $current;
+                break;
+            }
+        }
+
+        if($todo === null) {
+            echo "To-do not found";
+            exit;
+        }
     }
 
 

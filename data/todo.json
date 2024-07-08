@@ -5,7 +5,7 @@
         "creation_date": "04\/07\/2024",
         "modification_date": null,
         "completed_date": null,
-        "completed": false
+        "completed": true
     },
     "3": {
         "name": "Test2",
@@ -20,9 +20,9 @@
         "completed": false
     },
     "5": {
-        "name": "TODO - test update",
         "id": 6,
-        "creation_date": "07.05.24 1:47 pm",
+        "name": "Finish this project",
+        "creation_date": "07.08.24 7:34 am",
         "completed": false
     }
 }
