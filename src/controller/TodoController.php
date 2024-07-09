@@ -18,23 +18,9 @@ class TodoController
         require './src/view/todos.php';
     }
 
-    public function updateTodo()
+    public function updateTodo(array $data)
     {
-        $todoId = $_POST['id'];
-        $updatedName = $_POST['name'];
-        $todos = Todo::getAllTodos();
-
-        foreach($todos as $current) {
-            if($current['id'] == $todoId) {
-                $current['name'] == $updatedName;
-                $current['modification_date'] = date("m.d.y g:i a");
-                return $current = $todos;
-                break;
-            }
-        }
-
-        Todo::saveTodo($todos);
-        //? Todo::updateTodo($data);
+        Todo::updateTodo($data);
         header('Location: /');
         exit;
     }
@@ -52,6 +38,7 @@ class TodoController
 
     public function showUpdateForm(int $id)
     {
+
         Todo::showUpdateForm($id);
         /**Todo::getTodoById($id);*/
         require './src/view/update.php';

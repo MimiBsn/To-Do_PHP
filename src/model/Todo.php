@@ -44,7 +44,7 @@ class Todo
         $todos = self::getAllTodos();
         $newId = end($todos);
         $data['id'] = $newId['id'] + 1;
-        $data['creation_date'] = date("m.d.y g:i a");
+        $data['creation_date'] = date("d.m.y g:i a");
         $data['completed'] = false;
         $todos[] = $data;
         self::saveTodo($todos);
@@ -59,15 +59,14 @@ class Todo
      */
     public static function updateTodo(array $data)
     {
-        $todoId = $_POST['id'];
-        $updatedName = $_POST['name'];
+        $todoId = $data['id'];
+        $updatedName = $data['name'];
         $todos = self::getAllTodos();
 
-        foreach($todos as $current) {
+        foreach($todos as &$current) {
             if($current['id'] == $todoId) {
-                $current['name'] == $updatedName;
-                $current['modification_date'] = date("m.d.y g:i a");
-                return $current = $todos;
+                $current['name'] = $updatedName;
+                $current['modification_date'] = date("d.m.y g:i a");
                 break;
             }
         }

@@ -1,34 +1,34 @@
 {
     "0": {
         "id": 1,
-        "name": "TODO - test",
+        "name": "TODO - test update2",
         "creation_date": "04\/07\/2024",
-        "modification_date": null,
+        "modification_date": "09.07.24 8:38 am",
         "completed_date": null,
         "completed": true
-    },
-    "3": {
-        "name": "Test2",
-        "id": 4,
-        "creation_date": "07.05.24 1:14 pm",
-        "completed": "false"
-    },
-    "4": {
-        "name": "Aller",
-        "id": 5,
-        "creation_date": "07.05.24 1:29 pm",
-        "completed": false
-    },
-    "5": {
-        "id": 6,
-        "name": "Finish this project",
-        "creation_date": "07.08.24 7:34 am",
-        "completed": false
     },
     "6": {
         "name": "Finish this exercise",
         "id": 7,
         "creation_date": "07.08.24 1:34 pm",
+        "completed": false
+    },
+    "7": {
+        "name": "Groceries - milk, butter, wheat",
+        "id": 8,
+        "creation_date": "09.07.24 8:54 am",
+        "completed": false
+    },
+    "8": {
+        "name": "Cat's grooming appointment",
+        "id": 9,
+        "creation_date": "09.07.24 8:55 am",
+        "completed": false
+    },
+    "9": {
+        "name": "Sort Todos by 'completed'",
+        "id": 10,
+        "creation_date": "09.07.24 8:56 am",
         "completed": false
     }
 }

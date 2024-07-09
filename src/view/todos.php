@@ -17,26 +17,24 @@ $todos = Todo::getAllTodos();
             <th scope="col">Name</th>
             <th scope="col">Update</th>
             <th scope="col">Delete</th>
+            <th scope="col">Creation date</th>
+            <th scope="col">Modification date</th>
         </tr>
         <template x-for="todo in todos" :key="todo.id">
             <tr>
-                <td><input type="checkbox">
+                <td><input type="checkbox" x-model="todo.completed" onchange="this.form.submit()" value="completed">
                 </td>
                 <td>
                     <span x-text="todo.name"></span>
                 </td>
                 <td><a :href="'/update?id=' + todo.id" class="btn btn-light btn-sm">Update</a></td>
                 <td><a :href="'/delete?id=' + todo.id" class="btn btn-light btn-sm">Delete</a></td>
-        </template>
-        </tbody>
+                <td><span x-text="todo.creation_date"></span></td>
+                <td><span x-text="todo.modification_date"></span></td>
+            </tr>
     </table>
+    </template>
 </div>
-<h2>Completed To-do</h2>
-<!--<div x-show="todo.completed">
-    <td>
-        <span x-text="todo.name"></span>
-    </td>
-</div>!-->
 
 
 <?php include 'footer.php';?>
